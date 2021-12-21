@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.wrapper{
+    max-width: 100%;
+    overflow: hidden;
+}
+#banner2 {
+    background-image: url('../img/group-16.jpg');
+    background-size: 100% 100%;
+    max-width: 100%;
+    height: 370px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.navbar{
+    background-color: #525252;
+}
+.nabar ul{
+    overflow: auto;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.white_logo_transparent_background {
+    width: 73px;
+    height: 54px;
+  }
+@media screen and (max-width: 1020px){
+    .navbar-brand img {
+        width: 80px;
+        height: 65px;
+    }
+}
+@media screen and (max-width: 1080px){
+    .navbar-brand img {
+        width: 120px;
+        height: 80px;
+    }
+}
+.Rounded-Rectangle-5-copy-4 {
+    width: 161px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px white;
+    background-color: #006072;
+    text-align: center;
+}
+.Rounded-Rectangle-5 {
+    width: 97px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px white;
+    
+    background-color: #006072;
+    text-align: center;
+  }
+  .Rounded-Rectangle-5-copy {
+    width: 161px;
+    height: 40px;
+    border-radius: 20px;
+    
+    border: solid 1px white;
+    background-color: #006072;
+    text-align: center;
+}
+.FAQs {
+    display: block;
+    margin: 40px auto 14px auto;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4f4f4f;
+  }
+  .Forma-1-copy-5 {
+    display: block;
+    margin: auto;
+  }
+  
+  .Whether-you-are-Customer-or-Service-provider-We-have-tried-our {
+    display: block;
+    margin: 37px auto 37px auto;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: center;
+    color: #646464;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color:#1d7a8c;
+}
+.nav-pills .nav-link {
+    border-bottom: 2px solid #1d7a8c;
+    border-radius: 0rem;
+}
+.nav-tabs .nav-link {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+.For-Customer {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .accordion-button::after {
+    order: -1;
+    margin-left: 0; 
+    margin-right:0.5em;
+    background-image: url('../img/vector-smart-object-copy.png');
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url('../img/vector-smart-object.png')
+}
+.Lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-Vestib {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #646464;
+  }
+  .Lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-Sed-id {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #646464;
+  }
+  .test7{
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: 55px auto 10px auto; 
+  }
+  .test8{
+    display: block;
+    text-align: center;
+    align-items: end;
+    margin: 5px auto; 
+  }
+  .Rounded-Rectangle-506-copy2 {
+    width: 357px;
+    height: 390px;
+    border-left:2px solid rgb(28, 105, 219);
+    border-radius: 4px;
+    box-shadow: 0 0 30px 0 #e4ebf0;
+    background-color: var(--white);
+  }
+  .GET-OUR-NEWSLETTER {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    color: #353548;
+  }
+  .Rounded-Rectangle-649 {
+    width: 233px;
+    height: 40px;
+    display: block;
+    float: right;
+    margin-right: -80px;
+    margin-top: -45px;
+    text-align: left;
+    padding-left: 17px;
+    padding-top: 3px;
+    border-radius: 20px;
+    border: solid 1px #565656;
+    background-color: #f4f5f8;
+  }
+  .Your-Email {
+    display: block;
+    margin-bottom: 10px;;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.29;
+    letter-spacing: normal;
+    text-align: left;
+    color: #565656;
+  }
+  .Rounded-Rectangle-649-copy {
+    width: 88px;
+    height: 40px;
+    display: block;
+    margin-left: 70px;
+    float: left;
+    text-align: left;
+    border-radius: 20px;
+    background-color: #ff7b6d;
+  }
+  .Submit {
+    display: block;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.29;
+    letter-spacing: normal;
+    color: white;
+    padding: 5px 5px 5px 20px;
+
+  }
+  .Ellipse-649 {
+    width: 48px;
+    height: 48px;
+    padding: 18px 14px 20px;
+    background-color: #525252;
+    border-radius: 50%;
+    padding-top: 7px;
+  }
+  img.Forma-1-new {
+    width: 20px;
+    height: 10px;
+    object-fit: contain;
+    background-color: transparent;
+    position: relative;
+  }
+  img.Layer-598 {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    float: right;
+    margin-top: -9px;
+  }
+  
+  .Rectangle-12 {
+    width: 100%;
+    height: 250px;
+    background-color: black;
+  }
+  img.white_logo_transparent_background-copy-4 {
+    width: 106px;
+    height: 78px;
+    float: left;
+    margin-top: 60px;
+    object-fit: contain;
+  }
+  .Home-About-Testimonials-FAQs-In {
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    color: #f1f1f1;
+  }
+  .Home-About-Testimonials-FAQs-In-copy {
+    width: 102;
+    display: block;
+    margin: auto;
+    margin-left: -30px;
+    margin-top: 70px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    color: #f1f1f1;
+  }
+  .Rectangle-12 span .fa{
+    color: white;
+  }
+  .test9{
+    display: block;
+    align-items: end;
+    text-align: right;
+    margin: 5px auto; 
+    
+  }
+  .fb-insta-icon{
+    align-items: end;
+    margin-top: 70px;
+  }
+  hr{
+      color: white;
+  }
+  .test10{
+      display: block;
+      margin: auto;
+      text-align: center;
+  }
+  .-Helperland-All-rights-reserved-Terms-and-Conditions {
+    padding: 5px 5px 5px 5px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #737381;
+  }
+  
+  .-Helperland-All-rights-reserved-Terms-and-Conditions .text-style-1 {
+    color: #737381;
+  }
+  @media screen and (min-width: 601px)  {
+    div.example {
+      font-size: 50px;
+    }
+    div.example2 {
+      font-size: 16px;
+    }
+    div.example3 {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    div.example {
+      font-size: 30px;
+      margin-left: 5px;
+    }
+    div.example2 {
+      font-size: 10px;
+    }
+    div.example3 {
+      font-size: 16px;
+    }
+    img.step-arrow1{
+      display: none;
+    }
+    img.step-arrow1-copy{
+      display: none;
+    }
+    img.step-arrow1-copy-2{
+      display: none;
+    }
+    .dominate-the-industry-in-scale-and-scope-with-an-adaptable-ext-copy{
+      margin: 10px auto;
+    }
+    .test4{
+      position: relative;
+      display: block;
+      margin: 50px auto;
+      text-align: center;
+      align-items: center;
+    }
+    img.Group-36{
+      width: 350px;;
+      height: 300px;
+    }
+    img.Layer-598{
+      display: none;
+    }
+    .Ellipse-649{
+      display: none;
+    }
+    .Rounded-Rectangle-649 {
+      width: 233px;
+      height: 40px;
+      display: block;
+      float: right;
+      margin-right: -80px;
+      margin-top: 0px;
+      text-align: left;
+      padding-left: 17px;
+      padding-top: 3px;
+      border-radius: 20px;
+      border: solid 1px #565656;
+      background-color: #f4f5f8;
+    }
+    .Home-About-Testimonials-FAQs-In { 
+      display: none;
+    }
+    .Home-About-Testimonials-FAQs-In-copy {
+       display: none;
+    }
+  
+  }
+   @media screen  and (max-width:1080px) and (min-width:810px){
+     div.example3{
+       margin-top: 50px;
+     }
+     .dominate-the-industry-in-scale-and-scope-with-an-adaptable-ext-copy{
+       margin: 20px auto;
+     }
+     .test4{
+       position: relative;
+      display: block;
+      margin: 100px auto 50px auto;
+      text-align: center;
+    }
+    .test5{
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+    }
+    img.Group-36{
+      margin-top: -65px;
+    }
+    img.step-arrow1{
+      display: none;
+    }
+    img.step-arrow1-copy{
+      display: none;
+    }
+    img.step-arrow1-copy-2{
+      display: none;
+    }
+    .Rounded-Rectangle-649-copy2{
+      display: none;
+    }
+    .OK{
+      display: none;
+    }
+   }
