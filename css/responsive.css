@@ -37,10 +37,11 @@ body {
 .navbar-light .navbar-nav .nav-link {
     color: white;
 }
+
 .book-a-cleaner:hover{
+  border: 1px solid white;
     border-radius: 20px;
     color: white;
-    background-color: #006072;
 }
 @media screen and (max-width: 1020px){
     .navbar-brand img {
