@@ -47,22 +47,32 @@ body {
   background-color: #1d7a8c;
 
 }
-.sidenav-primary .sidenav-link.active {
+.sidenav-link{
   color: white;
+}
+/* .sidenav-primary .sidenav-item .sidenav-link.active {
   background-color: #146371;
 }
-.sidenav-primary .sidenav-item .sidenav-link:hover{
-  color: white;
+.sidenav-primary .sidenav-item:hover{
   background-color: rgba(18,102,241,.05);
-}
-.sidenav-primary .sidenav-link.active:active{
+} */
+.sidenav-link:active, .sidenav-link:focus, .sidenav-link:hover {
   color: white;
   background-color: #146371;
+  outline: none;
 }
-.sidenav-primary .sidenav-link:focus{
+.sidenav-link:active{
   background-color: #146371;
 }
-.li-class:hover{
+/* .sidenav-primary .sidenav-link.active:active{
+  color: white;
+  background-color: #146371;
+} */
+/* .sidenav-primary .sidenav-link:focus{
+  background-color: #146371;
+} */
+.li-class{
+  color: white;
   background-color: #146371;
 }
 .left-margin{
@@ -168,6 +178,16 @@ img.Icon-Notification {
 .Welcome-Sandip .text-style-1 {
   font-weight: bold;
 }
+.calender-icon{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.date{
+  display: inline;
+}
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
@@ -213,6 +233,9 @@ thead {
 .table-container {
   margin-top: -38px;
   margin-left: 315px;
+}
+.btn{
+  border-radius: 20px;
 }
 
 .dataTables_filter, .dataTables_info { display: none; }
@@ -274,22 +297,22 @@ thead {
 	Label the data
 	*/
   td:nth-of-type(1):before {
-    content: "Name";
+    content: "Service Id";
   }
   td:nth-of-type(2):before {
-    content: "Position";
+    content: "Service Date";
   }
   td:nth-of-type(3):before {
-    content: "Office";
+    content: "Customer Details";
   }
   td:nth-of-type(4):before {
-    content: "Age";
+    content: "Payment";
   }
   td:nth-of-type(5):before {
-    content: "Start date";
+    content: "Time Conflict";
   }
   td:nth-of-type(6):before {
-    content: "Salary";
+    content: "Actions";
   }
   
   .dataTables_length {
