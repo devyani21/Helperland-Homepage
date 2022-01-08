@@ -37,8 +37,19 @@ body {
     margin-top: 144px;
     margin-left: 65px;
   }
+  .nav-li{
+    color: black;
+  }
+  .center{
+    margin-right: 105px;
+  }
 }
-
+.nav-li{
+  color: white;
+}
+.nav-li:hover{
+  color: black;
+}
 .sidenav{
   top: 200px;
   left: 80px;
@@ -46,6 +57,10 @@ body {
 .sidenav {
   background-color: #1d7a8c;
 
+}
+.sidenav{
+  position: absolute;
+  z-index: 900;
 }
 .sidenav-link{
   color: white;
@@ -71,15 +86,18 @@ body {
 /* .sidenav-primary .sidenav-link:focus{
   background-color: #146371;
 } */
-.li-class{
+/* .li-class{
   color: white;
   background-color: #146371;
-}
+} */
 .left-margin{
   margin-left: 20px !important;
 }
 .right-margin{
   margin-right: 20px !important;
+}
+.center{
+  margin-right: 105px;
 }
 .nav-scroller {
   position: relative;
@@ -90,6 +108,10 @@ body {
 
 .navbar{
   background-color: #525252;
+}
+.active{
+  color: white;
+  background-color: #146371 ;
 }
 .nav-scroller .nav {
   display: flex;
@@ -120,8 +142,8 @@ body {
   background-color: #6f42c1;
 }
 img.avatar {
-  width: 32px;
-  height: 27px;
+  width: 35px;
+  height: 32px;
   /* margin: 8px 7px 10px 18px; */
   object-fit: contain;
   background-color: var(--white);
@@ -193,6 +215,9 @@ img.Icon-Notification {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+  .invisible2{
+    display: none;
+  }
 }
 
 .wrapper {
@@ -231,7 +256,7 @@ thead {
   background: lighten(yellow,30%);
 }
 .table-container {
-  margin-top: -38px;
+  margin-top: -42px;
   margin-left: 315px;
 }
 .btn{
@@ -248,8 +273,14 @@ thead {
 @media only screen and (max-width: 767px) {
 
   .table-container {
-    margin-top: 144px;
+    margin-top: 8px;
     margin-left: 65px;
+  }
+  .nav-li{
+    color: black;
+  }
+  .center{
+    margin-right: 105px;
   }
   
   /* Force table to not be like tables anymore */
@@ -311,9 +342,9 @@ thead {
   td:nth-of-type(5):before {
     content: "Time Conflict";
   }
-  td:nth-of-type(6):before {
+  /* td:nth-of-type(6):before {
     content: "Actions";
-  }
+  } */
   
   .dataTables_length {
     display: none;

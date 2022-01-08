@@ -29,16 +29,34 @@
             alt="MDB Logo" draggable="false" />
         </a> -->
 
-        <ul class="sidenav-menu">
+        <ul class="sidenav-menu" id="sidenav-li">
           <li class="sidenav-item li-class">
             <a class="sidenav-link" href="">
-              <i class="fas fa-chart-area pr-3"></i><span>Dashboard</span></a>
+              </i><span>Dashboard</span></a>
           </li>
           <li class="sidenav-item li-class">
-            <a class="sidenav-link"><i class="fas fa-cogs pr-3"></i><span>New Service Requests</span></a>
+            <a class="sidenav-link" href="index.html"><span>New Service Requests</span></a>
           </li>
           <li class="sidenav-item li-class">
-            <a class="sidenav-link"><i class="fas fa-lock pr-3"></i><span>Upcoming Service Reuests</span></a>
+            <a class="sidenav-link" href="upcoming-service.html"><span>Upcoming Services</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Service Schedule</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Service History</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>My Ratings</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Block Customers</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Invoices</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Notifications</span></a>
           </li>
         </ul>
       </nav>
@@ -47,52 +65,82 @@
           <a class="navbar-brand" href="#"><img src="img/logo-large.png"
               class="img-fluid white_logo_transparent_background"></a>
 
+          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Dashboard </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">New Service Reqquests </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link " aria-current="page" href="index.html"><span class="nav-li">Upcoming Services </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Service Schedule </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Service History </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">My Ratings </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Block Customers </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Invoices </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Notifications </span></a>
+              </li>
+              <hr class="invisible2">
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Prices & Services </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" href="#"><span class="nav-li">Warranty</span></a>
+              </li>
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" href="#"><span class="nav-li">Blog</span></a>
+              </li>
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" href="#"><span class="nav-li">Contact</span></a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown right-margin left-margin center">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+              aria-expanded="false"><img src="img/Service-Provider-Upcoming-services/icon-notification.png"
+                class="Icon-Notification">
+              <span class="badge rounded-pill badge-notification bg-danger">1</span></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav-item dropdown right-margin left-margin invisible1">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+              aria-expanded="false"><img src="img/Service-Provider-Upcoming-services/avatar.png"
+                class="rounded-circle avatar" alt="" loading="lazy" /></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+          </ul>
           <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item active left-margin right-margin">
-                <a class="nav-link" aria-current="page" href="index.html">Prices & Services</a>
-              </li>
-              <li class="nav-item left-margin right-margin">
-                <a class="nav-link" href="#">Warranty</a>
-              </li>
-              <li class="nav-item left-margin right-margin">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item left-margin right-margin">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item dropdown right-margin left-margin invisible1">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img src="img/Service-Provider-Upcoming-services/icon-notification.png"
-                    class="Icon-Notification">
-                  <span class="badge rounded-pill badge-notification bg-danger">1</span></a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown right-margin left-margin invisible1">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img src="img/Service-Provider-Upcoming-services/avatar.png"
-                    class="rounded-circle avatar" alt="" loading="lazy" /></a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
     </header>
@@ -501,9 +549,13 @@
       });
     });
   </Script>
-  <!-- <script>
-  $('table').dataTable({searching: false});
-</script> -->
+  <script type="text/javascript">
+    $("#sidenav-li li a").on('click', function(e){
+      $("#sidenav-li .active").removeClass('active');
+      $(this).parent().addClass('active'); 
+  });
+  </script>
+  
 </body>
 
 </html>
