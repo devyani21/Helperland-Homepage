@@ -210,6 +210,50 @@ img.Icon-Notification {
 .date{
   display: inline;
 }
+.Ellipse-5 {
+    width: 44px;
+    height: 44px;
+    /* margin: 22px 12px 19px 83px; */
+    padding: 8px 7px;
+    border: solid 1px #aaa;
+    border-radius: 25px;
+    background-color: var(--white);
+  }
+img.cap {
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+    /* background-color: #9c9c9c; */
+  }
+.lyum-watson{
+    display: inline;
+}
+img.star{
+    width: 15px;
+    height: 15px;
+}
+.rate{
+    background-color: #6da9b5;
+}
+.rate:hover{
+    background-color: #6da9b5;
+}
+.payment {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: right;
+    color: #1d7a8c;
+  }
+  
+   .text-style-1 {
+    font-size: 20px;
+    font-weight: normal;
+  }
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
@@ -351,149 +395,157 @@ thead {
   }
 }
 .Rectangle-12 {
-  width: 100%;
-  height: 250px;
-  background-color: black;
-}
-img.white_logo_transparent_background-copy-4 {
-  width: 106px;
-  height: 78px;
-  float: left;
-  margin-top: 60px;
-  object-fit: contain;
-}
-.Home-About-Testimonials-FAQs-In {
-  display: block;
-  margin: auto;
-  margin-top: 70px;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 2.14;
-  letter-spacing: normal;
-  color: #f1f1f1;
-}
-.Home-About-Testimonials-FAQs-In-copy {
-  width: 102;
-  display: block;
-  margin: auto;
-  margin-left: -30px;
-  margin-top: 70px;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 2.14;
-  letter-spacing: normal;
-  color: #f1f1f1;
-}
-.Rectangle-12 span .fa{
-  color: white;
-}
-.test9{
-  display: block;
-  align-items: end;
-  text-align: right;
-  margin: 5px auto; 
-  
-}
-.fa{
-    color: white;
-}
-.fb-insta-icon{
-  align-items: end;
-  margin-top: 70px;
-  color: white;
-}
-.fb-icon{
-    width: 10px;
-    height: 10px;
-}
-hr{
-    color: white;
-}
-.test10{
+    width: 100%;
+    height: 250px;
+    background-color: black;
+  }
+  img.white_logo_transparent_background-copy-4 {
+    width: 106px;
+    height: 78px;
+    float: left;
+    margin-top: 60px;
+    object-fit: contain;
+  }
+  .Home-About-Testimonials-FAQs-In {
     display: block;
     margin: auto;
-    text-align: center;
-}
-.-Helperland-All-rights-reserved-Terms-and-Conditions {
-  padding: 5px 5px 5px 5px;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: normal;
-  color: #737381;
-}
-
-.-Helperland-All-rights-reserved-Terms-and-Conditions .text-style-1 {
-  color: #737381;
-}
-@media screen and (max-width: 600px) {
-  div.example {
-    font-size: 30px;
-    margin-left: 5px;
-  }
-  div.example2 {
-    font-size: 10px;
-  }
-  div.example3 {
-    font-size: 16px;
-  }
-  img.step-arrow1{
-    display: none;
-  }
-  img.step-arrow1-copy{
-    display: none;
-  }
-  img.step-arrow1-copy-2{
-    display: none;
-  }
-  .dominate-the-industry-in-scale-and-scope-with-an-adaptable-ext-copy{
-    margin: 10px auto;
-  }
-  .test4{
-    position: relative;
-    display: block;
-    margin: 50px auto;
-    text-align: center;
-    align-items: center;
-  }
-  img.Group-36{
-    width: 350px;;
-    height: 300px;
-  }
-  img.Layer-598{
-    display: none;
-  }
-  .Ellipse-649{
-    display: none;
-  }
-  .Rounded-Rectangle-649 {
-    width: 233px;
-    height: 40px;
-    display: block;
-    float: right;
-    margin-right: -80px;
-    margin-top: 0px;
-    text-align: left;
-    padding-left: 17px;
-    padding-top: 3px;
-    border-radius: 20px;
-    border: solid 1px #565656;
-    background-color: #f4f5f8;
-  }
-  .Home-About-Testimonials-FAQs-In { 
-    display: none;
+    margin-top: 70px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    color: #f1f1f1;
   }
   .Home-About-Testimonials-FAQs-In-copy {
-     display: none;
+    width: 102;
+    display: block;
+    margin: auto;
+    margin-left: -30px;
+    margin-top: 70px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    color: #f1f1f1;
   }
-
+  .Rectangle-12 span .fa{
+    color: white;
+  }
+  .test9{
+    display: block;
+    align-items: end;
+    text-align: right;
+    margin: 5px auto; 
+    
+  }
+  .fa{
+      color: white;
+  }
+  .fb-insta-icon{
+    align-items: end;
+    margin-top: 70px;
+    color: white;
+  }
+  .fb-icon{
+      width: 10px;
+      height: 10px;
+  }
+  hr{
+      color: white;
+  }
+  .test10{
+      display: block;
+      margin: auto;
+      text-align: center;
+  }
+  .-Helperland-All-rights-reserved-Terms-and-Conditions {
+    padding: 5px 5px 5px 5px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #737381;
+  }
+  
+  .-Helperland-All-rights-reserved-Terms-and-Conditions .text-style-1 {
+    color: #737381;
+  }
+  @media screen and (max-width: 600px) {
+    div.example {
+      font-size: 30px;
+      margin-left: 5px;
+    }
+    div.example2 {
+      font-size: 10px;
+    }
+    div.example3 {
+      font-size: 16px;
+    }
+    img.step-arrow1{
+      display: none;
+    }
+    img.step-arrow1-copy{
+      display: none;
+    }
+    img.step-arrow1-copy-2{
+      display: none;
+    }
+    .dominate-the-industry-in-scale-and-scope-with-an-adaptable-ext-copy{
+      margin: 10px auto;
+    }
+    .test4{
+      position: relative;
+      display: block;
+      margin: 50px auto;
+      text-align: center;
+      align-items: center;
+    }
+    img.Group-36{
+      width: 350px;;
+      height: 300px;
+    }
+    img.Layer-598{
+      display: none;
+    }
+    .Ellipse-649{
+      display: none;
+    }
+    .Rounded-Rectangle-649 {
+      width: 233px;
+      height: 40px;
+      display: block;
+      float: right;
+      margin-right: -80px;
+      margin-top: 0px;
+      text-align: left;
+      padding-left: 17px;
+      padding-top: 3px;
+      border-radius: 20px;
+      border: solid 1px #565656;
+      background-color: #f4f5f8;
+    }
+    .Home-About-Testimonials-FAQs-In { 
+      display: none;
+    }
+    .Home-About-Testimonials-FAQs-In-copy {
+       display: none;
+    }
+  
+  }
+  .Rounded-Rectangle-5-copy-4 {
+    width: 161px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px white;
+    background-color: #006072;
+    text-align: center;
 }

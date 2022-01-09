@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sevice History</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+        integrity="sha512-thoh2veB35ojlAhyYZC0eaztTAUhxLvSZlWrNtlV01njqs/UdY3421Jg7lX0Gq9SRdGVQeL8xeBp9x1IPyL1wQ=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://mdbootstrap.com/previews/mdb-ui-kit/sidenav/css/mdb.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.3/css/select.bootstrap5.min.css" />
+
+    <link rel="stylesheet" href="css/customer-service-history.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav id="sidenav-1" class="sidenav float-xs-right invisible1" data-mdb-right="true" role="navigation"
+                data-hidden="false" data-accordion="true">
+
+                <ul class="sidenav-menu" id="sidenav-li">
+                    <li class="sidenav-item li-class">
+                        <a class="sidenav-link" href="">
+                            </i><span>Dashboard</span></a>
+                    </li>
+                    <li class="sidenav-item li-class">
+                        <a class="sidenav-link" href="customer-service-history.html"><span>Service History</span></a>
+                    </li>
+                    <li class="sidenav-item li-class">
+                        <a class="sidenav-link" href="upcoming-service.html"><span>Service Schedule</span></a>
+                    </li>
+                    <li class="sidenav-item li-class">
+                        <a class="sidenav-link"><span>Favourite Pros</span></a>
+                    </li>
+                    <li class="sidenav-item li-class">
+                        <a class="sidenav-link"><span>Invoices</span></a>
+                    </li>
+                    <li class="sidenav-item li-class">
+                        <a class="sidenav-link"><span>Notifications</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="img/logo-large.png"
+                            class="img-fluid white_logo_transparent_background"></a>
+
+                    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item left-margin right-margin invisible2">
+                                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Dashboard
+                                    </span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin invisible2">
+                                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Service
+                                        History </span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin invisible2">
+                                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Service
+                                        Schedule </span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin invisible2">
+                                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Favourite
+                                        Pros </span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin invisible2">
+                                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Invoices
+                                    </span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin invisible2">
+                                <a class="nav-link" aria-current="page" href="index.html"><span
+                                        class="nav-li">Notifications </span></a>
+                            </li>
+                            <hr class="invisible2">
+                            <li class="nav-item ">
+                                <a class="nav-link Rounded-Rectangle-5-copy-4" aria-current="page"
+                                    href="#"><span class="nav-li">  Book Now </span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin">
+                                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Prices &
+                                        Services </span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin">
+                                <a class="nav-link" href="#"><span class="nav-li">Warranty</span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin">
+                                <a class="nav-link" href="#"><span class="nav-li">Blog</span></a>
+                            </li>
+                            <li class="nav-item left-margin right-margin">
+                                <a class="nav-link" href="#"><span class="nav-li">Contact</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item dropdown right-margin left-margin center">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                                aria-expanded="false"><img
+                                    src="img/Service-Provider-Upcoming-services/icon-notification.png"
+                                    class="Icon-Notification">
+                                <span class="badge rounded-pill badge-notification bg-danger">1</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown right-margin left-margin invisible1">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                                aria-expanded="false"><img src="img/Service-Provider-Upcoming-services/avatar.png"
+                                    class="rounded-circle avatar" alt="" loading="lazy" /></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <section class="welcome">
+            <div class="container">
+                <div class="row">
+                    <div class="Welcome-Sandip">
+                        Welcome, Gaurang!
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <section>
+        <div class="container table-container w-75">
+            <table id="example" class="table" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Service Details</th>
+                        <th>Service Provider</th>
+                        <th>Payment</th>
+                        <th>Status</th>
+                        <th>Rate SP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63 
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                                    class="calender-icon"><span>07/01/22</span></div>
+                            <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                                    class="calender-icon"><span>12:00 - 02:00</span></div>
+                        </td>
+                        <td>
+                            <div style="display: inline-block; margin-top: 17px">
+                                <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                            </div>
+                            <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                                <div>
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                    <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="payment">
+                                <span class="text-style-1">€ </span> 63
+                              </span>
+                        </td>
+                        <td><button type="button" class="btn btn-success">Success</button></td>
+                        <td><button type="button" class="btn btn-danger rate">Rate SP</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="Rectangle-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col">
+                        <img src="img/white-logo-transparent-background.png"
+                            srcset="img/white-logo-transparent-background@2x.png 2x,img/white-logo-transparent-background@3x.png 3x"
+                            class="white_logo_transparent_background-copy-4">
+                    </div>
+                    <div class="col-lg-1 col">
+                        <div class="Home-About-Testimonials-FAQs-In">
+                            Home
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col">
+                        <div class="Home-About-Testimonials-FAQs-In">
+                            About
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col">
+                        <div class="Home-About-Testimonials-FAQs-In">
+                            Testimonials
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col">
+                        <div class="Home-About-Testimonials-FAQs-In">
+                            FAQs
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col">
+                        <div class="Home-About-Testimonials-FAQs-In-copy">
+                            Insurance Policy
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col">
+                        <div class="Home-About-Testimonials-FAQs-In">
+                            Impressum
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col test9 fb-insta-icon">
+                        <span>
+                            <!-- <img src="img/Service-Provider-Upcoming-services/facebook-icon.png" alt="" class="fb-icon"> -->
+                            <i class="fa fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg col test10">
+                        <span class="-Helperland-All-rights-reserved-Terms-and-Conditions">
+                            ©2018Helperland<span class="text-style-1">.</span>All rights reserved.Terms and
+                            Conditions | Privacy Policy
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+        integrity="sha512-ZvbjbJnytX9Sa03/AcbP/nh9K95tar4R0IAxTS2gh2ChiInefr1r7EpnVClpTWUEN7VarvEsH3quvkY1h0dAFg=="
+        crossorigin="anonymous"></script>
+    <script src="js/upcoming-service.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "dom": '<"top"i>rt<"bottom"flp><"clear">'
+            });
+        });
+    </Script>
+    <script type="text/javascript">
+        $("#sidenav-li li a").on('click', function (e) {
+            $("#sidenav-li .active").removeClass('active');
+            $(this).parent().addClass('active');
+        });
+    </script>
+
+</body>
+
+</html>

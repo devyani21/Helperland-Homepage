@@ -37,7 +37,9 @@ body {
 .navbar-light .navbar-nav .nav-link {
     color: white;
 }
-
+#header1{
+  transition: 0.2s;
+}
 .book-a-cleaner:hover{
   border: 1px solid white;
     border-radius: 20px;
@@ -85,7 +87,7 @@ body {
 .Lorem-ipsum-text {
     width: 388px;
     height: 46px;
-    margin: 120px 120px 22px 41px;
+    margin: 260px 120px 22px 41px;
     font-family: Roboto;
     font-size: 50px;
     font-weight: 500;
@@ -689,7 +691,7 @@ body {
   img.Forma-1-new {
     width: 20px;
     height: 10px;
-    margin-top: -20px;
+    margin-top: -4px;
     object-fit: contain;
     background-color: transparent;
     position: relative;

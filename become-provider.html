@@ -16,12 +16,12 @@
 <body>
     <div class="wrapper">
         <div id="banner" class="parallax">
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-light">
+            <header id="header2">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar2">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#"><img src="img/white-logo-transparent-background.png"
                                 srcset="img/white-logo-transparent-background@2x.png 2x,img/white-logo-transparent-background@3x.png 3x"
-                                class="img-fluid"></a></a>
+                                class="img-fluid" id="logo-image2"></a></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -29,28 +29,27 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item book-a-cleaner-copy">
+                                    <a class="nav-link Rounded-Rectangle-5-copy-4" aria-current="page"
+                                        href="#">Book now</a>
+                                </li>
                                 <li class="nav-item book-a-cleaner">
-                                    <a class="nav-link Rounded-Rectangle-5-copy-4 book-a-cleaner" aria-current="page"
-                                        href="#">Book a
-                                        Cleaner</a>
+                                    <a class="nav-link" href="#">Prices & Services</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Prices</a>
+                                <li class="nav-item book-a-cleaner">
+                                    <a class="nav-link" href="#">Warranty</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Our Guarantee</a>
-                                </li>
-                                <li class="nav-item">
+                                <li class="nav-item book-a-cleaner">
                                     <a class="nav-link" href="#">Blog</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact Us</a>
+                                <li class="nav-item book-a-cleaner">
+                                    <a class="nav-link" href="#">Contact</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link Rounded-Rectangle-5 book-a-cleaner" href="#">Login</a>
+                                    <a class="nav-link Rounded-Rectangle-5 book-a-cleaner-copy" href="#">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link Rounded-Rectangle-5-copy book-a-cleaner" href="#">Become a
+                                    <a class="nav-link Rounded-Rectangle-5-copy book-a-cleaner-copy" href="#">Become a
                                         Helper</a>
                                 </li>
                             </ul>
@@ -296,6 +295,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+        <script>
+            // When the user scrolls down 50px from the top of the document, resize the header's font size
+            window.onscroll = function () { scrollFunction() };
+    
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("header2").style.fontSize = "15px";
+                } else {
+                    document.getElementById("header2").style.fontSize = "1rem";
+                }
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("navbar2").style.background = "#525252";
+                } else {
+                    document.getElementById("navbar2").style.background = "transparent";
+                }
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("logo-image2").style.width = "80px";
+                } else {
+                    document.getElementById("logo-image2").style.width = "175px";
+                }
+    
+            }
+    
+        </script>
 
 </body>
 
