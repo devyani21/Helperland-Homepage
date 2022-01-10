@@ -76,10 +76,31 @@ body {
   text-align: left;
   color: #646464;
 }
-.btn{
+.add-new-user{
   float: right !important;
   margin-top: 4px;
-  margin-right: 50px;
+  margin-right: 0px;
+}
+.search-button{
+  float: right;
+  margin-top: -38px;
+  margin-right: 100px;
+}
+.clear-button{
+  color: black;
+  background-color: transparent;
+  float: right;
+  margin-top: -38px;
+  
+}
+.clear-button:hover{
+  background-color: cornflowerblue;
+}
+.user-name-select{
+  max-width: 15%;
+}
+.input-group{
+  width: 16%;
 }
 .dataTables_filter, .dataTables_info { display: none; }
 .table-hover > tbody > tr:hover {
