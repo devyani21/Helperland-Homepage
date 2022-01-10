@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Admin|User management</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.3/css/select.bootstrap5.min.css" />
+
+</head>
+
+<body>
+  <!--Main Navigation-->
+  <header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+            <span>Service Management</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+            <span>Role Management </span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Coupon Code Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Escalation Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Service Requests</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Service Providers</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple active"><span>User Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Finance Module</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Zip Code Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Rating Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Inuiry Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Newsletter Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Content Management</span></a>
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <span class="helperland">helperland</span>
+        </a>
+
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+
+          <!-- Avatar -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <img src="img/avatar.png" class="rounded-circle" height="22"
+                alt="" loading="lazy" /><span class="james-smith">James Smith</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">My profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mt-1 mr-4">
+            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-power-off"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">My profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main style="margin-top: 58px">
+    <div class="container" style="margin-left: 25px; margin-right: 25px;">
+      <div class="row">
+        <div class="col-lg-6 col">
+          <span class="User-Management">
+            User Management
+          </span>
+        </div>
+        <div class="col-lg-6 col">
+          <div>
+          <button type="button" class="btn btn-primary">add new user</button>
+          </div>
+        </div>
+      </div>
+      <table id="example" class="table" style="width:100%">
+        <thead>
+          <tr>
+            <th>Service ID</th>
+            <th>Service Date</th>
+            <th>Customer Details</th>
+            <th>Payment</th>
+            <th>Time Conflict</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1123</td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>1234</td>
+            <td>
+            </td>
+            <td></td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6486</td>
+            <td>
+            </td>
+            <td></td>
+            <td>66</td>
+            <td>2009/01/12</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6743</td>
+            <td>
+            </td>
+            <td></td>
+            <td>22</td>
+            <td>2012/03/29</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>7899</td>
+            <td>
+            </td>
+            <td></td>
+            <td>33</td>
+            <td>2008/11/28</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6768</td>
+            <td>
+            </td>
+            <td></td>
+            <td>61</td>
+            <td>2012/12/02</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>3645</td>
+            <td>
+            </td>
+            <td></td>
+            <td>59</td>
+            <td>2012/08/06</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>7890</td>
+            <td>
+            </td>
+            <td></td>
+            <td>55</td>
+            <td>2010/10/14</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6789</td>
+            <td>
+            </td>
+            <td></td>
+            <td>39</td>
+            <td>2009/09/15</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>1267</td>
+            <td>
+            </td>
+            <td></td>
+            <td>23</td>
+            <td>2008/12/13</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>2345</td>
+            <td>
+            </td>
+            <td></td>
+            <td>30</td>
+            <td>2008/12/19</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>3456</td>
+            <td>
+            </td>
+            <td></td>
+            <td>22</td>
+            <td>2013/03/03</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6789</td>
+            <td>
+            </td>
+            <td></td>
+            <td>36</td>
+            <td>2008/10/16</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>7889</td>
+            <td>
+            </td>
+            <td></td>
+            <td>43</td>
+            <td>2012/12/18</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6543</td>
+            <td>
+            </td>
+            <td></td>
+            <td>19</td>
+            <td>2010/03/17</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>2349</td>
+            <td>
+            </td>
+            <td></td>
+            <td>66</td>
+            <td>2012/11/27</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6784</td>
+            <td>
+            </td>
+            <td></td>
+            <td>64</td>
+            <td>2010/06/09</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>8904</td>
+            <td>
+            </td>
+            <td></td>
+            <td>59</td>
+            <td>2009/04/10</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>9876</td>
+            <td>
+            </td>
+            <td></td>
+            <td>41</td>
+            <td>2012/10/13</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>8888</td>
+            <td>
+            </td>
+            <td></td>
+            <td>35</td>
+            <td>2012/09/26</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <!--Main layout-->
+  <!-- MDB -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/admin.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "dom": '<"top"i>rt<"bottom"flp><"clear">'
+      });
+    });
+  </Script>
+
+</body>
+
+</html>

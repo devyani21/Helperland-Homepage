@@ -1,0 +1,193 @@
+body {
+  background-color: #f2f4f5;
+  overflow-x: hidden;
+}
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+.navbar{
+  background-color: #1d7a8c;
+}
+.helperland {
+  /* width: 197px;
+  height: 39px;
+  margin: 1px 956px 0 0; */
+  background-color: var(--white);
+  font-family: SwitzeraADF;
+  font-size: 37.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.65;
+  letter-spacing: normal;
+  text-align: left;
+  color: white;
+}
+.james-smith{
+  color: white;
+}
+.fa{
+  color: white;
+}
+.User-Management {
+  /* width: 181px;
+  height: 20px;
+  margin: 34px 736px 16px 24px; */
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.05;
+  letter-spacing: normal;
+  text-align: left;
+  color: #646464;
+}
+.btn{
+  float: right !important;
+  margin-top: 4px;
+  margin-right: 50px;
+}
+.dataTables_filter, .dataTables_info { display: none; }
+.table-hover > tbody > tr:hover {
+  background-color: lighten(cyan, 40%);
+}
+/* //important if we want to add ellipsis
+//to cells with content longer than width */
+.table {
+@media only screen and (min-width: 768px) {
+  table-layout: fixed;
+  //this declaration overwrites 
+  //the default plugin style
+  max-width: 100% !important;
+}
+}
+
+thead {
+background: #ddd;
+}
+
+.table td:nth-child(2) {
+overflow: hidden;
+/* white-space: nowrap; */
+text-overflow: ellipsis;
+}
+
+.highlight {
+background: lighten(yellow,30%);
+}
+
+.dataTables_filter, .dataTables_info { display: none; }
+@media (max-width:1400px){
+.table-container {
+  margin-top: 144px;
+  margin-left: 65px;
+}
+}
+@media only screen and (max-width: 767px) {
+
+/* Force table to not be like tables anymore */
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+  display: block;
+}
+/* Hide table headers (but not display: none;, for accessibility) */
+thead tr,
+tfoot tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+td {
+  /* Behave  like a "row" */
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 50% !important;
+}
+td:before {
+  /* Now like a table header */
+  position: absolute;
+  /* Top/left values mimic padding */
+  top: 6px;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+.table td:nth-child(1) {
+    background: #ccc;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+}
+/*
+Label the data
+*/
+td:nth-of-type(1):before {
+  content: "Service Id";
+}
+td:nth-of-type(2):before {
+  content: "Service Date";
+}
+td:nth-of-type(3):before {
+  content: "Customer Details";
+}
+td:nth-of-type(4):before {
+  content: "Payment";
+}
+td:nth-of-type(5):before {
+  content: "Time Conflict";
+}
+td:nth-of-type(6):before {
+  content: "Actions";
+}
+
+.dataTables_length {
+  display: none;
+}
+}
+@media (min-width: 1400px){
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1240px;
+}
+}

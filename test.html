@@ -2,537 +2,605 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Upcoming Service</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <!-- MDB -->
-    <link rel="stylesheet" href="https://mdbootstrap.com/previews/mdb-ui-kit/sidenav/css/mdb.min.css" />
-    <!-- PRISM -->
-    <link rel="stylesheet" href="https://mdbootstrap.com/previews/mdb-ui-kit/sidenav/dev/css/new-prism.css" />
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upcoming Services</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    integrity="sha512-thoh2veB35ojlAhyYZC0eaztTAUhxLvSZlWrNtlV01njqs/UdY3421Jg7lX0Gq9SRdGVQeL8xeBp9x1IPyL1wQ=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <link rel="stylesheet" href="https://mdbootstrap.com/previews/mdb-ui-kit/sidenav/css/mdb.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.3/css/select.bootstrap5.min.css" />
 
-    <!-- Custom styles -->
-    <link rel="stylesheet" type="text/css" href="css/upcoming-service.css">
+  <link rel="stylesheet" href="css/admin-user-management.css" />
 </head>
 
 <body>
-    <!--Main Navigation-->
+  <div class="wrapper">
     <header>
-        <!-- Sidenav -->
-        <nav id="sidenav-1" class="sidenav float-xs-right" data-mdb-right="true" role="navigation" data-hidden="false"
-            data-accordion="true">
-            <a class="ripple d-flex justify-content-center py-4" href="#!" data-ripple-color="primary">
-                <img id="MDB-logo" src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
-                    alt="MDB Logo" draggable="false" />
-            </a>
+      <nav id="sidenav-1" class="sidenav float-xs-right invisible1" data-mdb-right="true" role="navigation"
+        data-hidden="false" data-accordion="true">
+        <!-- <a class="ripple d-flex justify-content-center py-4" href="#!" data-ripple-color="primary">
+          <img id="MDB-logo" src="https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
+            alt="MDB Logo" draggable="false" />
+        </a> -->
 
-            <ul class="sidenav-menu">
-                <li class="sidenav-item li-class">
-                    <a class="sidenav-link" href="">
-                        <i class="fas fa-chart-area pr-3"></i><span>Dashboard</span></a>
-                </li>
-                <li class="sidenav-item li-class">
-                    <a class="sidenav-link"><i class="fas fa-cogs pr-3"></i><span>New Service Requests</span></a>
-                </li>
-                <li class="sidenav-item li-class">
-                    <a class="sidenav-link li-class"><i class="fas fa-lock pr-3"></i><span>Upcoming Service Reuests</span></a>
-                </li>
+        <ul class="sidenav-menu" id="sidenav-li">
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link" href="">
+              </i><span>Dashboard</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link" href="upcoming-service.html"><span>New Service Requests</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link" href="upcoming-service.html"><span>Upcoming Services</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Service Schedule</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Service History</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>My Ratings</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Block Customers</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Invoices</span></a>
+          </li>
+          <li class="sidenav-item li-class">
+            <a class="sidenav-link"><span>Notifications</span></a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><span class="helperland">helperland</span></a>
+
+          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Dashboard </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">New Service Reqquests </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link " aria-current="page" href="index.html"><span class="nav-li">Upcoming Services </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Service Schedule </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Service History </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">My Ratings </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Block Customers </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Invoices </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin invisible2">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Notifications </span></a>
+              </li>
+              <hr class="invisible2">
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" aria-current="page" href="index.html"><span class="nav-li">Prices & Services </span></a>
+              </li>
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" href="#"><span class="nav-li">Warranty</span></a>
+              </li>
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" href="#"><span class="nav-li">Blog</span></a>
+              </li>
+              <li class="nav-item left-margin right-margin">
+                <a class="nav-link" href="#"><span class="nav-li">Contact</span></a>
+              </li>
+            </ul> -->
+          </div>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+              aria-expanded="false"><img src="img/Service-Provider-Upcoming-services/avatar.png"
+              class="rounded-circle avatar" alt="" loading="lazy" /><span class="james-smith">James Smith</span></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
             </ul>
-        </nav>
-
-        <!-- Toggler -->
-        <button data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1" class="btn btn-primary"
-            aria-controls="#sidenav-1" aria-haspopup="true">
-            <i class="fas fa-bars"></i>
-        </button>
-        <!-- Toggler -->
-
-        <!-- Navbar -->
-        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
-            <!-- Container wrapper -->
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="img/white-logo-transparent-background.png"
-                        srcset="img/white-logo-transparent-background@2x.png 2x,img/white-logo-transparent-background@3x.png 3x"
-                        class="img-fluid white_logo_transparent_background"></a>
-
-                <!-- Right links -->
-                <ul class="navbar-nav ml-auto d-flex flex-row">
-                    <!-- Notification dropdown -->
-                    <li class="nav-item invisible1 ml-3 mr-3 nav-li">
-                        <a class="nav-link" href="#">Prices & Services</a>
-                    </li>
-                    <li class="nav-item invisible1 ml-3 mr-3 nav-li">
-                        <a class="nav-link" href="#">Warranty</a>
-                    </li>
-                    <li class="nav-item invisible1 ml-3 mr-3 nav-li">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item invisible1 ml-3 mr-3 nav-li">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="nav-item dropdown invisible1 ml-3 mr-3">
-                        <a class="nav-link dropdown-toggle hidden-arrow" href="#"
-                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-bell"></i>
-                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Some news</a></li>
-                            <li><a class="dropdown-item" href="#">Another news</a></li>
-                            <li>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Avatar -->
-                    <li class="nav-item dropdown ml-3 mr-3">
-                        <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
-                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                            <img src="img/Service-Provider-Upcoming-services/avatar.png" class="rounded-circle avatar"
-                                alt="" loading="lazy" />
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">My profile</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <button data-toggle="sidenav" data-target="#sidenav-1"
-                    class="navbar-toggler ms-auto ml-auto float-xs-right" type="button" aria-controls="#sidenav-1"
-                    aria-expanded="false" aria-haspopup="true">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-            </div>
-            <!-- Container wrapper -->
-        </nav>
-        <!-- Navbar -->
-        
+          </li>
+          
+          <li class="nav-item dropdown invisible1 right-margin">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+              aria-expanded="false"><i class="fa fa-power-off"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+          </ul>
+          <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <section>
-        <div class="welcome">
-            <div class="Welcome-Sandip">
-                Welcome, Sandip!
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container ml-5 mt-3">
-            <header class="text-center">
-            </header>
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="card rounded shadow border-0">
-                  <div class="card-body p-5 bg-white rounded">
-                    <div class="table-responsive">
-                      <table id="example" style="width:100%" class="table table-striped table-bordered table-responsive-stack">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
-                          </tr>
-                          <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                            <td>$170,750</td>
-                          </tr>
-                          <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                            <td>$86,000</td>
-                          </tr>
-                          <tr>
-                            <td>Cedric Kelly</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2012/03/29</td>
-                            <td>$433,060</td>
-                          </tr>
-                          <tr>
-                            <td>Airi Satou</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>33</td>
-                            <td>2008/11/28</td>
-                            <td>$162,700</td>
-                          </tr>
-                          <tr>
-                            <td>Brielle Williamson</td>
-                            <td>Integration Specialist</td>
-                            <td>New York</td>
-                            <td>61</td>
-                            <td>2012/12/02</td>
-                            <td>$372,000</td>
-                          </tr>
-                          <tr>
-                            <td>Herrod Chandler</td>
-                            <td>Sales Assistant</td>
-                            <td>San Francisco</td>
-                            <td>59</td>
-                            <td>2012/08/06</td>
-                            <td>$137,500</td>
-                          </tr>
-                          <tr>
-                            <td>Rhona Davidson</td>
-                            <td>Integration Specialist</td>
-                            <td>Tokyo</td>
-                            <td>55</td>
-                            <td>2010/10/14</td>
-                            <td>$327,900</td>
-                          </tr>
-                          <tr>
-                            <td>Colleen Hurst</td>
-                            <td>Javascript Developer</td>
-                            <td>San Francisco</td>
-                            <td>39</td>
-                            <td>2009/09/15</td>
-                            <td>$205,500</td>
-                          </tr>
-                          <tr>
-                            <td>Sonya Frost</td>
-                            <td>Software Engineer</td>
-                            <td>Edinburgh</td>
-                            <td>23</td>
-                            <td>2008/12/13</td>
-                            <td>$103,600</td>
-                          </tr>
-                          <tr>
-                            <td>Jena Gaines</td>
-                            <td>Office Manager</td>
-                            <td>London</td>
-                            <td>30</td>
-                            <td>2008/12/19</td>
-                            <td>$90,560</td>
-                          </tr>
-                          <tr>
-                            <td>Quinn Flynn</td>
-                            <td>Support Lead</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
-                            <td>2013/03/03</td>
-                            <td>$342,000</td>
-                          </tr>
-                          <tr>
-                            <td>Charde Marshall</td>
-                            <td>Regional Director</td>
-                            <td>San Francisco</td>
-                            <td>36</td>
-                            <td>2008/10/16</td>
-                            <td>$470,600</td>
-                          </tr>
-                          <tr>
-                            <td>Haley Kennedy</td>
-                            <td>Senior Marketing Designer</td>
-                            <td>London</td>
-                            <td>43</td>
-                            <td>2012/12/18</td>
-                            <td>$313,500</td>
-                          </tr>
-                          <tr>
-                            <td>Tatyana Fitzpatrick</td>
-                            <td>Regional Director</td>
-                            <td>London</td>
-                            <td>19</td>
-                            <td>2010/03/17</td>
-                            <td>$385,750</td>
-                          </tr>
-                          <tr>
-                            <td>Michael Silva</td>
-                            <td>Marketing Designer</td>
-                            <td>London</td>
-                            <td>66</td>
-                            <td>2012/11/27</td>
-                            <td>$198,500</td>
-                          </tr>
-                          <tr>
-                            <td>Paul Byrd</td>
-                            <td>Chief Financial Officer (CFO)</td>
-                            <td>New York</td>
-                            <td>64</td>
-                            <td>2010/06/09</td>
-                            <td>$725,000</td>
-                          </tr>
-                          <tr>
-                            <td>Gloria Little</td>
-                            <td>Systems Administrator</td>
-                            <td>New York</td>
-                            <td>59</td>
-                            <td>2009/04/10</td>
-                            <td>$237,500</td>
-                          </tr>
-                          <tr>
-                            <td>Bradley Greer</td>
-                            <td>Software Engineer</td>
-                            <td>London</td>
-                            <td>41</td>
-                            <td>2012/10/13</td>
-                            <td>$132,000</td>
-                          </tr>
-                          <tr>
-                            <td>Dai Rios</td>
-                            <td>Personnel Lead</td>
-                            <td>Edinburgh</td>
-                            <td>35</td>
-                            <td>2012/09/26</td>
-                            <td>$217,500</td>
-                          </tr>
-                          <tr>
-                            <td>Jenette Caldwell</td>
-                            <td>Development Lead</td>
-                            <td>New York</td>
-                            <td>30</td>
-                            <td>2011/09/03</td>
-                            <td>$345,000</td>
-                          </tr>
-                          <tr>
-                            <td>Yuri Berry</td>
-                            <td>Chief Marketing Officer (CMO)</td>
-                            <td>New York</td>
-                            <td>40</td>
-                            <td>2009/06/25</td>
-                            <td>$675,000</td>
-                          </tr>
-                          <tr>
-                            <td>Caesar Vance</td>
-                            <td>Pre-Sales Support</td>
-                            <td>New York</td>
-                            <td>21</td>
-                            <td>2011/12/12</td>
-                            <td>$106,450</td>
-                          </tr>
-                          <tr>
-                            <td>Doris Wilder</td>
-                            <td>Sales Assistant</td>
-                            <td>Sidney</td>
-                            <td>23</td>
-                            <td>2010/09/20</td>
-                            <td>$85,600</td>
-                          </tr>
-                          <tr>
-                            <td>Angelica Ramos</td>
-                            <td>Chief Executive Officer (CEO)</td>
-                            <td>London</td>
-                            <td>47</td>
-                            <td>2009/10/09</td>
-                            <td>$1,200,000</td>
-                          </tr>
-                          <tr>
-                            <td>Gavin Joyce</td>
-                            <td>Developer</td>
-                            <td>Edinburgh</td>
-                            <td>42</td>
-                            <td>2010/12/22</td>
-                            <td>$92,575</td>
-                          </tr>
-                          <tr>
-                            <td>Jennifer Chang</td>
-                            <td>Regional Director</td>
-                            <td>Singapore</td>
-                            <td>28</td>
-                            <td>2010/11/14</td>
-                            <td>$357,650</td>
-                          </tr>
-                          <tr>
-                            <td>Brenden Wagner</td>
-                            <td>Software Engineer</td>
-                            <td>San Francisco</td>
-                            <td>28</td>
-                            <td>2011/06/07</td>
-                            <td>$206,850</td>
-                          </tr>
-                          <tr>
-                            <td>Fiona Green</td>
-                            <td>Chief Operating Officer (COO)</td>
-                            <td>San Francisco</td>
-                            <td>48</td>
-                            <td>2010/03/11</td>
-                            <td>$850,000</td>
-                          </tr>
-                          <tr>
-                            <td>Shou Itou</td>
-                            <td>Regional Marketing</td>
-                            <td>Tokyo</td>
-                            <td>20</td>
-                            <td>2011/08/14</td>
-                            <td>$163,000</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <section class="welcome">
+      <div class="container">
+        <div class="row">
+          <div class="Welcome-Sandip">
+            Welcome, Sandip!
           </div>
-    </section>
+        </div>
+      </div>
+  </div>
+  </section>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script> -->
-    <!-- PRISM -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-    
-        <script type="text/javascript"
-        src="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"></script>
-        <script type="text/javascript"
-        src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript"
-        src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <section>
+    <div class="container table-container w-75">
+      <table id="example" class="table" style="width:100%">
+        <thead>
+          <tr>
+            <th>Service ID</th>
+            <th>Service Date</th>
+            <th>Customer Details</th>
+            <th>Payment</th>
+            <th>Time Conflict</th>
+            <th>Acion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1123</td>
+            <td>
+              <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td>
+              <div>
+                Gaurang Patel
+              </div>
+              <div>
+              <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+            </div></td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>1234</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+              class="calender-icon"><span>07/01/22</span></div>
+          <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+              class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>63</td>
+            <td>2011/07/25</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6486</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+              class="calender-icon"><span>07/01/22</span></div>
+          <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+              class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>66</td>
+            <td>2009/01/12</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6743</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+              class="calender-icon"><span>07/01/22</span></div>
+          <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+              class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>22</td>
+            <td>2012/03/29</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>7899</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>33</td>
+            <td>2008/11/28</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6768</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>61</td>
+            <td>2012/12/02</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>3645</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>59</td>
+            <td>2012/08/06</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>7890</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>55</td>
+            <td>2010/10/14</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6789</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>39</td>
+            <td>2009/09/15</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>1267</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>23</td>
+            <td>2008/12/13</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>2345</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>30</td>
+            <td>2008/12/19</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>3456</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>22</td>
+            <td>2013/03/03</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6789</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>36</td>
+            <td>2008/10/16</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>7889</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>43</td>
+            <td>2012/12/18</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6543</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>19</td>
+            <td>2010/03/17</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>2349</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>66</td>
+            <td>2012/11/27</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>6784</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>64</td>
+            <td>2010/06/09</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>8904</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>59</td>
+            <td>2009/04/10</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>9876</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>41</td>
+            <td>2012/10/13</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+          <tr>
+            <td>8888</td>
+            <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+            </td>
+            <td><div>
+              Gaurang Patel
+            </div>
+            <div>
+            <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+          </div></td>
+            <td>35</td>
+            <td>2012/09/26</td>
+            <td><button type="button" class="btn btn-danger">Cancel</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <footer>
+    <div class="Rectangle-12">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col">
+                  <img src="img/white-logo-transparent-background.png"
+                      srcset="img/white-logo-transparent-background@2x.png 2x,img/white-logo-transparent-background@3x.png 3x"
+                      class="white_logo_transparent_background-copy-4">
+              </div>
+              <div class="col-lg-1 col">
+                  <div class="Home-About-Testimonials-FAQs-In">
+                      Home
+                  </div>
+              </div>
+              <div class="col-lg-1 col">
+                  <div class="Home-About-Testimonials-FAQs-In">
+                      About
+                  </div>
+              </div>
+              <div class="col-lg-1 col">
+                  <div class="Home-About-Testimonials-FAQs-In">
+                      Testimonials
+                  </div>
+              </div>
+              <div class="col-lg-1 col">
+                  <div class="Home-About-Testimonials-FAQs-In">
+                      FAQs
+                  </div>
+              </div>
+              <div class="col-lg-1 col">
+                  <div class="Home-About-Testimonials-FAQs-In-copy">
+                      Insurance Policy
+                  </div>
+              </div>
+              <div class="col-lg-1 col">
+                  <div class="Home-About-Testimonials-FAQs-In">
+                      Impressum
+                  </div>
+              </div>
+              <div class="col-lg-3 col test9 fb-insta-icon">
+                  <span>
+                      <!-- <img src="img/Service-Provider-Upcoming-services/facebook-icon.png" alt="" class="fb-icon"> -->
+                      <i class="fa fa-instagram"></i>
+                  </span>
+              </div>
+          </div>
+          <hr>
+          <div class="row">
+              <div class="col-lg col test10">
+                  <span class="-Helperland-All-rights-reserved-Terms-and-Conditions">
+                      ©2018Helperland<span class="text-style-1">.</span>All rights reserved.Terms and
+                      Conditions | Privacy Policy
+                  </span>
+              </div>
+          </div>
+      </div>
+  </div>
+  </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 
-    <script type="text/javascript"
-        src="https://mdbootstrap.com/previews/mdb-ui-kit/sidenav/dev/js/new-prism.js"></script>
-        <!-- MDB SNIPPET -->
-    <script type="text/javascript"
-        src="https://mdbootstrap.com/previews/mdb-ui-kit/sidenav/dev/js/dist/mdbsnippet.min.js"></script>
-    <!-- MDB -->
-    <script type="text/javascript" src="https://mdbootstrap.com/previews/mdb-ui-kit/sidenav/js/mdb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    integrity="sha512-ZvbjbJnytX9Sa03/AcbP/nh9K95tar4R0IAxTS2gh2ChiInefr1r7EpnVClpTWUEN7VarvEsH3quvkY1h0dAFg=="
+    crossorigin="anonymous"></script>
+  <script src="js/upcoming-service.js"></script>
+  <script type="text/javascript">
 
-    <!-- Custom scripts -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-   
-            // inspired by http://jsfiddle.net/arunpjohny/564Lxosz/1/
-            $('.table-responsive-stack').each(function (i) {
-               var id = $(this).attr('id');
-               //alert(id);
-               $(this).find("th").each(function(i) {
-                  $('#'+id + ' td:nth-child(' + (i + 1) + ')').prepend('<span class="table-responsive-stack-thead">'+             $(this).text() + ':</span> ');
-                  $('.table-responsive-stack-thead').hide();
-                  
-               });
-               
-         
-               
-            });
-         
-            
-            
-            
-            
-         $( '.table-responsive-stack' ).each(function() {
-           var thCount = $(this).find("th").length; 
-            var rowGrow = 100 / thCount + '%';
-            //console.log(rowGrow);
-            $(this).find("th, td").css('flex-basis', rowGrow);   
-         });
-            
-            
-            
-            
-         function flexTable(){
-            if ($(window).width() < 768) {
-               
-            $(".table-responsive-stack").each(function (i) {
-               $(this).find(".table-responsive-stack-thead").show();
-               $(this).find('thead').hide();
-            });
-               
-             
-            // window is less than 768px   
-            } else {
-               
-               
-            $(".table-responsive-stack").each(function (i) {
-               $(this).find(".table-responsive-stack-thead").hide();
-               $(this).find('thead').show();
-            });
-               
-               
-         
-            }
-         // flextable   
-         }      
-          
-         flexTable();
-            
-         window.onresize = function(event) {
-             flexTable();
-         };
-            
-            
-            
-            
-         
-           
-         // document ready  
-         });
-         
-         
-         
-         
-    </script>
-    <script type="text/javascript">
-        $(function() {
-            $(document).ready(function() {
-              $('#example').DataTable();
-            });
-          });
-    </script>
-    <script type="text/javascript">
-        const sidenav = document.getElementById("sidenav-1");
-        const instance = mdb.Sidenav.getInstance(sidenav);
-
-        let innerWidth = null;
-
-        const setMode = (e) => {
-            // Check necessary for Android devices
-            if (window.innerWidth === innerWidth) {
-                return;
-            }
-
-            innerWidth = window.innerWidth;
-
-            if (window.innerWidth < 1400) {
-                instance.changeMode("over");
-                instance.hide();
-            } else {
-                instance.changeMode("side");
-                instance.show();
-            }
-        };
-
-        setMode();
-
-        // Event listeners
-        window.addEventListener("resize", setMode);
-    </script>
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "dom": '<"top"i>rt<"bottom"flp><"clear">'
+      });
+    });
+  </Script>
+  <script type="text/javascript">
+    $("#sidenav-li li a").on('click', function(e){
+      $("#sidenav-li .active").removeClass('active');
+      $(this).parent().addClass('active'); 
+  });
+  </script>
+  
 </body>
 
 </html>
