@@ -16,6 +16,7 @@ body{
     height: 370px;
     background-repeat: no-repeat;
     overflow: hidden;
+    margin-top: 79px;
 }
 .navbar{
     background-color: #525252;
