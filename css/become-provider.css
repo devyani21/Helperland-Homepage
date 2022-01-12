@@ -37,8 +37,8 @@ body {
 .navbar-light .navbar-nav .nav-link {
     color: white;
 }
-#header2{
-  transition: 0.2s;
+#header1{
+  transition: 0.5s;
 }
 .vh-100{
   margin-top: 200px;

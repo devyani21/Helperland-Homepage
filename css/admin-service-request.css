@@ -1,11 +1,6 @@
 body {
     background-color: #f2f4f5;
     overflow-x: hidden;
-    width: 100%;
-  }
-  .wrapper{
-    max-width: 100%;
-    overflow:hidden;
   }
   @media (min-width: 991.98px) {
     main {
@@ -103,6 +98,7 @@ body {
   }
   .user-name-select{
     max-width: 15%;
+    margin-left: 10px;
   }
   .input-group{
     width: 16%;
@@ -231,9 +227,10 @@ body {
   img.star{
     width: 15px;
     height: 15px;
-}
-.date-picker{
+  }
+  .date-picker{
     border: 1px solid #bdbdbd;
     border-radius: 0.25rem;
-}
+  }
+  
   
