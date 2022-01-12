@@ -38,7 +38,7 @@ body {
     color: white;
 }
 #header1{
-  transition: 0.2s;
+  transition: 0.5s;
 }
 .book-a-cleaner:hover{
   border: 1px solid white;

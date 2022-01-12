@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Admin | Service Requests</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/admin-service-request.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.3/css/select.bootstrap5.min.css" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+  <!--Main Navigation-->
+  <header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+            <span>Service Management</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+            <span>Role Management </span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Coupon Code Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Escalation Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple active"><span>Service Requests</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Service Providers</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>User Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Finance Module</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Zip Code Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Rating Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Inuiry Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Newsletter Management</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><span>Content Management</span></a>
+        </div>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <span class="helperland">helperland</span>
+        </a>
+        <div>
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+
+          <!-- Avatar -->
+          <li class="nav-item dropdown mr-3">
+            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <img src="img/avatar.png" class="rounded-circle" height="22"
+                alt="" loading="lazy" /><span class="james-smith">James Smith</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">My profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mt-1 mr-5">
+            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-power-off"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">My profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  </div>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main style="margin-top: 58px">
+    <div class="container" style="margin-left: 25px; margin-right: 25px;">
+      <div class="row">
+        <div class="col-lg-6 col">
+          <span class="User-Management">
+            Service Requests
+          </span>
+        </div>
+        <div class="col-lg-6 col">
+          <div>
+          <button type="button" class="btn btn-primary add-new-user">add new user</button>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px; margin-bottom: 30px">
+        <div class="input-group flex-nowrap">
+            <input type="text" class="form-control" placeholder="Service Id" aria-label="service_id" aria-describedby="addon-wrapping">
+          </div> 
+        <select class="form-select user-name-select" aria-label="Default select example">
+          <option selected>Customer</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <select class="form-select user-name-select ml-2" aria-label="Default select example">
+          <option selected>Service Provider</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <input placeholder="From Date" class="date-picker" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="from_date" style="width: 180px;margin-left:10px;"/>
+        <input placeholder="To Date" class="date-picker" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="to_date" style="width: 180px;margin-left:10px;"/>
+        <div>
+          <button type="button" class="btn btn-primary search-button">search</button>
+         </div> 
+        <div>
+          <button type="button" class="btn btn-primary clear-button">Clear</button>
+         </div> 
+      </div>
+      <table id="example" class="table" style="width:100%">
+        <thead>
+            <tr>
+                <th>Service ID</th>
+                <th>Service Date</th>
+                <th>Customer Details</th>
+                <th>Service Provider</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1123</td>
+                <td>
+                  <div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td>
+                  <div>
+                    Gaurang Patel
+                  </div>
+                  <div>
+                  <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span style="display:inline-block">Musterstrabe 5,12345 Bonn</span>
+                </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-warning">New</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>1234</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-warning">New</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>6486</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-warning">New</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>6743</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                  class="calender-icon"><span>07/01/22</span></div>
+              <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                  class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-warning">New</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>7899</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-success">Completed</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>6768</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-success">Completed</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>3645</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-success">Completed</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>7890</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>6789</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>1267</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>2345</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td>
+                    <div style="display: inline-block; margin-top: 17px">
+                        <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                    </div>
+                    <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                        <div>
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        </div>
+                    </div>
+                </td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>3456</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>6789</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>7889</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>6543</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>2349</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>6784</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td><div style="display: inline-block; margin-top: 17px">
+                    <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                </div>
+                <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                    <div>
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                    </div>
+                </div></td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>8904</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td>
+                    <div style="display: inline-block; margin-top: 17px">
+                        <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                    </div>
+                    <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                        <div>
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        </div>
+                    </div>
+                </td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>9876</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td>
+                    <div style="display: inline-block; margin-top: 17px">
+                        <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                    </div>
+                    <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                        <div>
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        </div>
+                    </div>
+                </td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <td>8888</td>
+                <td><div><img src="img/Service-Provider-Upcoming-services/calender-icon.png" alt=""
+                      class="calender-icon"><span>07/01/22</span></div>
+                  <div><img src="img/Service-Provider-Upcoming-services/clock-icon.png" alt=""
+                      class="calender-icon"><span>12:00 - 02:00</span></div>
+                </td>
+                <td><div>
+                  Gaurang Patel
+                </div>
+                <div>
+                <img src="img/Service-Provider-Upcoming-services/house-icon.png" alt="" class="calender-icon"><span>Musterstrabe 5,12345 Bonn</span>
+              </div></td>
+                <td>
+                    <div style="display: inline-block; margin-top: 17px">
+                        <img src="img/Service-Provider-Upcoming-services/cap.png" class="cap">
+                    </div>
+                    <div style="display:block; margin-left:35px; margin-top:-40px">Lyum Watson
+                        <div>
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                            <img src="img/Service-Provider-Upcoming-services/star.png" alt="" class="star">
+                        </div>
+                    </div>
+                </td>
+                <td><button type="button" class="btn btn-primary">Pending</button></td>
+                <td><a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </main>
+  </div>
+  <!--Main layout-->
+  <!-- MDB -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/admin.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      $('#example').DataTable({
+        "dom": '<"top"i>rt<"bottom"flp><"clear">'
+      });
+    });
+  </Script>
+
+</body>
+
+</html>
