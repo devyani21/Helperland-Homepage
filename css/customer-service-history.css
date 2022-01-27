@@ -60,7 +60,8 @@ body {
 }
 .sidenav{
   position: absolute;
-  z-index: 900;
+  z-index: 0;
+  height: 720px;
 }
 .sidenav-link{
   color: white;
