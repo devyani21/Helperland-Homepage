@@ -8,9 +8,14 @@
     <title>Helperland</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/bootstrap-icons.svg">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    
+
 
 </head>
 
@@ -18,6 +23,87 @@
     <div class="wrapper">
         <div id="banner" class="parallax">
             <div id=header></div>
+            <!-- Modal -->
+            <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Login to your account</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" placeholder="Email"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="email"><i class="fa fa-user"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input id="passwordshow" type="password" class="form-control" placeholder="Password"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="password"><i class="fa fa-lock"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                </div>
+                                <div class="d-flex justify-content-center mb-3">
+                                    <button type="submit" class=" form-control btn btn-success btn-lg">Submit</button>
+                                </div>
+                                <div id="forgotpassword" class="d-flex justify-content-center">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#forgot-password">Forgot
+                                        Password?</a>
+                                </div>
+                                <div class="d-flex justify-content-center mb-5">
+                                    <span>Don't have an account? </span>
+                                    <span id="forgotpassword" class="d-flex justify-content-center">
+                                        <a href="customer-register.html">Create an account</a>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="forgot-password" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Forgot Password</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" placeholder="Email"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="email"><i class="fa fa-user"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                <div class="d-flex justify-content-center mb-3">
+                                    <button type="submit" class=" form-control btn btn-success btn-lg">Send</button>
+                                </div>
+                                <div id="forgotpassword" class="d-flex justify-content-center">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#login">Login Now</a>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
             <section>
                 <div class="row">
                     <div class="col-lg col Lorem-ipsum-text example nubull">
@@ -441,30 +527,22 @@
                     </div>
                 </div>
             </div>
-            <div class="Rectangle-12-copy">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg col test3">
-                            <div class="Lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-Ut-feu">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nunc libero, ac
-                                malesuada ligula
-                                aliquam ac.<span class="text-style-1">Privacy Policy</span>
-                            </div>
-                            <div class="Rounded-Rectangle-649-copy2">
-                                <span class="OK">
-                                    OK!
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="col-lg col test3">
+                <!-- Cookie Banner -->
+                <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+                    🍪 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nunc libero, ac
+                    malesuada ligula
+                    aliquam ac.<a class="text-style-1" href="https://www.cookiesandyou.com/" target="blank">Privacy
+                        Policy</a>
+                    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookieBanner()">
+                        OK!
+                    </button>
                 </div>
             </div>
-
-        </footer>
+    </footer>
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
@@ -473,6 +551,37 @@
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script> -->
     <script src="js/common.js" type="text/javascript"></script>
+    <script>
+        /* Javascript to show and hide cookie banner using localstorage */
+        /* Shows the Cookie banner */
+        function showCookieBanner() {
+            let cookieBanner = document.getElementById("cb-cookie-banner");
+            cookieBanner.style.display = "block";
+        }
+
+        /* Hides the Cookie banner and saves the value to localstorage */
+        function hideCookieBanner() {
+            localStorage.setItem("cb_isCookieAccepted", "yes");
+            let cookieBanner = document.getElementById("cb-cookie-banner");
+            cookieBanner.style.display = "none";
+        }
+
+        /* Checks the localstorage and shows Cookie banner based on it. */
+        function initializeCookieBanner() {
+            let isCookieAccepted = localStorage.getItem("cb_isCookieAccepted");
+            if (isCookieAccepted === null) {
+                localStorage.setItem("cb_isCookieAccepted", "no");
+                showCookieBanner();
+            }
+            if (isCookieAccepted === "no") {
+                showCookieBanner();
+            }
+        }
+
+        // Assigning values to window object
+        window.onload = initializeCookieBanner();
+        window.cb_hideCookieBanner = hideCookieBanner;
+    </script>
 </body>
 
 </html>
